@@ -1,0 +1,93 @@
+css
+body {
+    background-color: #fce4ec; /* 温馨的淡粉色背景 */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #e91e63; /* 醒目的玫红色 */
+    font-size: 4em;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin: 0 auto 30px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #e91e63;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale( .75 );
+    }
+    20% {
+        transform: scale( 1 );
+    }
+    40% {
+        transform: scale( .75 );
+    }
+    60% {
+        transform: scale( 1 );
+    }
+    80% {
+        transform: scale( .75 );
+    }
+    100% {
+        transform: scale( .75 );
+    }
+}
